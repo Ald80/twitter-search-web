@@ -1,0 +1,26 @@
+{% extends 'template.html' %}
+{% block body %}
+<div align="center">
+    <form method="post" action="{{ url_for('second.search_controller') }}">
+        <div class="form-group">
+            <!--<label for="search_name">Pesquise no Twitter:</label>-->
+            <input type="text" class="form-control col-sm-4" placeholder="Buscar no Twitter" id="search_name" name="search_name">
+            <small id="emailHelp" class="form-text text-muted">Tente buscar por pessoas, tópicos ou palavras-chave</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Pesquisar
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+            </svg>
+        </button>
+    </form>
+
+    <div class="display-tweet text-justify">
+        {% if tweets %}
+            {% for tweet in tweets  %}
+                <p>{{ tweet.full_text }}</p>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

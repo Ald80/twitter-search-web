@@ -1,0 +1,71 @@
+body {
+    color: white;
+    background-color: #111a22;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu,
+                 "Helvetica Neue", sans-serif;
+}
+
+.form-control {
+    background-color: #253341;
+    color: #8899A6;
+
+}
+
+.form-control:focus {
+    background-color: #111a22;
+    color: #ffffff;
+    border-color: #1da1f2;
+    box-shadow:none;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-primary {
+    border-color: #1da1f2;
+    background-color: #111a22;
+    color: #1da1f2;
+}
+
+.display-tweet {
+    margin-left: 60px;
+    margin-right: 60px;
+    font-size: 23px;
+
+}
+
+form {
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+footer {
+    color: #8899A6;
+    text-align: center;
+    position: fixed;
+}
+
+.border-second {
+    border-color: #8c8273 !important;
+    border-top-color: #8c8273 !important;
+    border-right-color: #8c8273 !important;
+    border-bottom-color: #8c8273 !important;
+    border-left-color: #8c8273 !important;
+}
+
+navbar-custom-global {
+    border-color: #8c8273 ;
+    border-top-color: #8c8273 ;
+    border-right-color: #8c8273 ;
+    border-bottom-color: #8c8273 ;
+    border-left-color: #8c8273 ;
+}
+
+.twitter-logo {
+    color: #e8e6e3;
+    display: inline-block;
+    width: 45px ;
+    height: 45px ;
+}

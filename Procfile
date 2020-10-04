@@ -1,0 +1,1 @@
+web: src/app_init.py
