@@ -1,1 +1,1 @@
-web: python app_init.py
+web: src/python app_init.py

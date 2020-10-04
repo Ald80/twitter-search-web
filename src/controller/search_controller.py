@@ -11,8 +11,5 @@ def hello():
 @second.route('/search', methods=['POST'])
 def search_controller():
     search_name = request.form['search_name']
-#   print(search_name)
     tweets = search_tweet(search_name)
-    for tweet in tweets:
-        print()
     return render_template('index.html', tweets=tweets)
