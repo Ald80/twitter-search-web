@@ -1,6 +1,6 @@
 import os
-from flask import Flask, request, render_template
-from src.controller.search_controller import second
+from flask import Flask
+from search_controller import second
 
 app = Flask(__name__)
 app.register_blueprint(second)
