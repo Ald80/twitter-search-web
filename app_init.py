@@ -1,12 +1,9 @@
 import os
 from flask import Flask
-from search_controller import second
+from routes import second
 
 app = Flask(__name__)
 app.register_blueprint(second)
-
-# Blueprints & Using Multiple Python Files
-# https://www.youtube.com/watch?v=WteIH6J9v64&ab_channel=TechWithTim
 
 if __name__ == "__main__":
     # app.run(debug=True, port=8080)

@@ -1,18 +1,20 @@
 from dotenv import load_dotenv
 import os
+import tweepy
 
-load_dotenv()
+def authentication():
 
-consumer_key = os.environ.get("${{CONSUMER_KEY}}")
-consumer_secret = os.environ.get("${{CONSUMER_SECRET}}")
+    load_dotenv()
 
-access_token = os.environ.get("${{ACCESS_TOKEN}}")
-access_token_secret = os.environ.get("${{ACCESS_TOKEN_SECRET}}")
+    consumer_key = os.environ.get("CONSUMER_KEY")
+    consumer_secret = os.environ.get("CONSUMER_SECRET")
+    access_token = os.environ.get("ACCESS_TOKEN")
+    access_token_secret = os.environ.get("ACCESS_TOKEN_SECRET")
 
-credentials = {
-    "consumer_key": consumer_key,
-    "consumer_secret": consumer_secret,
-    "access_token": access_token,
-    "access_token_secret": access_token_secret
-}
 
+
+    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(access_token, access_token_secret)
+    api = tweepy.API(auth)
+
+    return api

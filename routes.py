@@ -1,6 +1,6 @@
 from flask import request, render_template, Blueprint
 
-from search_service import search_tweet
+from search import search_tweet
 
 second = Blueprint("second", __name__, template_folder="templates", static_folder="static")
 
