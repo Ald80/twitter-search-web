@@ -37,3 +37,34 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+var colors = ['#007bff', '#28a745', '#333333', '#c3e6cb', '#dc3545', '#6c757d'];
+
+var graphicOptions = {
+    cutoutPercentage: 85,
+    legend: {position: 'botton', padding: 5, labels: {pointStyle: 'circle', usePointStyle: true}
+}
+
+var chGraphicData = {
+    labels: ['Bootstrap', 'Popper', 'Other'],
+    datasets: [
+        {
+           backgroundColor: colors.slice(0,3),
+           borderWidth: 0,
+           data: [74, 11, 40],
+        }
+    ]
+};
+
+var chGraphic = document.getElementById('graphic');
+if (chGraphic) {
+    new Chart(chGraphic, {
+        type: 'pie',
+        data: chGraphicData,
+        options: graphicOptions,
+    });
+}
+
+</script>
